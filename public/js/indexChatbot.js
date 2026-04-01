@@ -1,6 +1,3 @@
-// Ensure the API key is defined
-import { GEMINI_API_KEY, GEMINI_MODEL } from "./config.js";
-
 // Chatbot functionality for index page
 class IndexChatbot {
     constructor() {
@@ -42,18 +39,29 @@ class IndexChatbot {
     }
 
     toggleChatbot() {
-        const window = document.getElementById('chatbotWindow');
-        if (window) {
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        if (chatbotWindow) {
             this.isOpen = !this.isOpen;
-            window.style.display = this.isOpen ? 'flex' : 'none';
+            if (this.isOpen) {
+                chatbotWindow.style.display = 'flex';
+                requestAnimationFrame(() => chatbotWindow.classList.add('active'));
+            } else {
+                chatbotWindow.classList.remove('active');
+                setTimeout(() => {
+                    if (!this.isOpen) chatbotWindow.style.display = 'none';
+                }, 300);
+            }
         }
     }
 
     closeChatbot() {
-        const window = document.getElementById('chatbotWindow');
-        if (window) {
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        if (chatbotWindow) {
             this.isOpen = false;
-            window.style.display = 'none';
+            chatbotWindow.classList.remove('active');
+            setTimeout(() => {
+                if (!this.isOpen) chatbotWindow.style.display = 'none';
+            }, 300);
         }
     }
 
@@ -159,7 +167,7 @@ How can I assist you today?`
         if (!messagesContainer) return;
 
         const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${message.role}`;
+        messageDiv.className = `message ${message.role === 'assistant' ? 'bot-message assistant' : 'user-message user'}`;
         
         const messageContent = document.createElement('div');
         messageContent.className = 'message-content';

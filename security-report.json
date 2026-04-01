@@ -1,12 +1,101 @@
 {
-  "timestamp": "2025-06-24T15:41:48.729Z",
-  "nodeVersion": "v24.2.0",
+  "timestamp": "2026-04-01T12:47:49.005Z",
+  "nodeVersion": "v25.8.1",
   "vulnerabilities": {
-    "total": 0,
+    "total": 8,
     "critical": 0,
     "high": 0,
     "moderate": 0,
-    "low": 0
+    "low": 8
   },
-  "details": []
+  "details": [
+    {
+      "package": "@google-cloud/firestore",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "@google-cloud/storage",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "@tootallnate/once",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "firebase-admin",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "google-gax",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "http-proxy-agent",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "retry-request",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "package": "teeny-request",
+      "severity": "low",
+      "title": "Unknown vulnerability",
+      "url": "",
+      "fixAvailable": {
+        "name": "firebase-admin",
+        "version": "10.3.0",
+        "isSemVerMajor": true
+      }
+    }
+  ]
 }

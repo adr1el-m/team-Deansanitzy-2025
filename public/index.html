@@ -399,33 +399,6 @@
             }
         });
 
-        // Toggle chatbot window
-        document.getElementById('chatbotToggle').addEventListener('click', function () {
-            const chatbotWindow = document.getElementById('chatbotWindow');
-            if (chatbotWindow.style.display === 'block') {
-                chatbotWindow.style.opacity = '0';
-                chatbotWindow.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    chatbotWindow.style.display = 'none';
-                }, 300);
-            } else {
-                chatbotWindow.style.display = 'block';
-                setTimeout(() => {
-                    chatbotWindow.style.opacity = '1';
-                    chatbotWindow.style.transform = 'translateY(0)';
-                }, 10);
-            }
-        });
-
-        // Close chatbot
-        document.getElementById('closeChatbot').addEventListener('click', function () {
-            const chatbotWindow = document.getElementById('chatbotWindow');
-            chatbotWindow.style.opacity = '0';
-            chatbotWindow.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                chatbotWindow.style.display = 'none';
-            }, 300);
-        });
     </script>
     
     <!-- Include the chatbot script -->
